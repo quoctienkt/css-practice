@@ -1,0 +1,143 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+html {
+	font-size: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+}
+
+nav {
+	border-right: 2px solid rgba(0, 22, 22, 0.4);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 320px;
+	height: 100%;
+}
+
+nav .navbar-icon {
+    display: none;
+}
+
+nav header {
+	font-size: 1.8rem;
+	text-align: center;
+	padding: 10px;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	overflow-y: auto;
+	height: calc(100% - 1.5 * 1.8rem - 20px);
+}
+
+nav ul li {
+	border-top: 1px solid black;
+	padding: 10px 0;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: black;
+	margin-left: 40px;
+	margin-right: 10px;
+	font-size: 1.1rem;
+}
+
+#main-doc {
+	height: 100%;
+	margin: 24px 20px 24px 336px;
+}
+
+.main-section {
+	margin-top: 16px;
+}
+
+.main-section header {
+	font-size: 1.8rem;
+}
+
+.main-section article {
+	margin-top: 16px;
+	margin-left: 16px;
+}
+
+.main-section code {
+	background-color: #f7f7f7;
+	display: block;
+	font-size: 0.8rem;
+	color: #4a4e5d;
+	white-space: pre-line;
+	padding: 15px;
+	margin: 10px;
+	line-height: 2;
+	word-wrap: break-word;
+}
+
+@media (max-width: 815px) {
+	#navbar {
+		width: 100%;
+		z-index: 1;
+		background-color: white;
+		height: auto;
+		border-right: none;
+		border-bottom: 1px solid rgba(0, 22, 22, 0.4);
+	}
+
+	#navbar header {
+		float: left;
+		width: 70%;
+		box-sizing: border-box;
+		text-align: left;
+		padding-left: 24px;
+	}
+
+	#navbar .navbar-icon {
+		float: right;
+		font-size: 1.8rem;
+		padding: 10px;
+		line-height: 1.5;
+		box-sizing: border-box;
+		text-align: right;
+		padding-right: 24px;
+        display: block;
+	}
+
+	.navbar-list {
+		width: calc(100% - 48px);
+		background-color: green;
+		margin: 0 24px 0 24px;
+        height: 0px;
+        transition: height 1s;
+        transition-timing-function: ease;
+	}
+
+	.navbar-list.expand {
+		display: flex;
+        height: 300px;
+	}
+	.navbar-list::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+	.navbar-list li a {
+		color: white;
+	}
+
+	#main-doc {
+		width: 100%;
+		margin: 64px 24px 24px 24px;
+	}
+}
